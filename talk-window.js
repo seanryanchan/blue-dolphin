@@ -11,25 +11,23 @@ $( document ).ready(function() {
                        '<button class="btn btn-default">Accept</button>')
                        .addClass('open-request');
     });
+
+    var msgTemp = '<li class="media"><div class="media-body"><div class="media"><a class="pull-left" href="#"><img class="media-object img-circle " src="img/favicon.png"></a><div class="media-body">';
+
+    var msgTemp2 = ('<br><small class="text-muted">Blue Dolphin | 23rd June at 5:00pm</small><hr></div></div></div></li>');
+    $('button').click(function(){
+      var msg = $('#chatmsg').val();
+      $('#start').append(msgTemp + msg + msgTemp2);
+    });
+
 });
 
-$(document).on(function(){
-  var msgTemp = $('<li class="media">
-      <div class="media-body">
-          <div class="media">
-              <a class="pull-left" href="#">
-                  <img class="media-object img-circle " src="https://app.teamsupport.com/dc/1078/UserAvatar/2733968/48/1470773158079">
-              </a>
-              <div class="media-body">
-
-  </li>');
-
-  var msgTemp2 = $('S<br
-                   <small class="text-muted">Blue Dolphin | 23rd June at 5:00pm</small>
-                    <hr>
-                </div>
-            </div>
-        </div>
-');
-  var msg = $('input').val();
-})
+// $(document).on(function(){
+//   var msgTemp = $('<li class="media"><div class="media-body"><div class="media"><a class="pull-left" href="#"><img class="media-object img-circle " src="img/favicon.png"></a><div class="media-body">');
+//
+//   var msgTemp2 = $('S<br><small class="text-muted">Blue Dolphin | 23rd June at 5:00pm</small><hr></div></div></div></li>');
+//   var msg = $('input').val();
+//   $('button').click(function(){
+//     $('#start').append(msgTemp + msg + msgTemp2);
+//   });
+// });
