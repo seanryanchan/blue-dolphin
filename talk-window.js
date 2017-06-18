@@ -17,7 +17,7 @@ $( document ).ready(function() {
     var msgTemp2 = ('<br><small class="text-muted">Blue Dolphin | 23rd June at 5:00pm</small><hr></div></div></div></li>');
     $('button').click(function(){
       var msg = $('#chatmsg').val();
-      $('#start').append(msgTemp + msg + msgTemp2);
+      $('ul li').last().append(msgTemp + msg + msgTemp2);
     });
 
 });
